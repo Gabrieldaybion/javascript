@@ -16,12 +16,37 @@
 </head>
 <body>
   <h1>Iniciando estudos com Dom.</h1>
-  <p>Aqui vai o resultado.</p>
-  <p>Aprendendo a usa <strong>DOM</strong> em JavaScript.</p>
+  <p>Aqui vai o resultado.</p><!-- [0] é esse paragrafo -->
+  <p>Aprendendo a usa <strong>DOM</strong> em JavaScript.</p><!-- [1] -->
+  
 
-  <div>Clique em mim.</div>
+  <div id="msg">Clique em mim.</div>
   <script>
+
+    var t = window.document.querySelector('div#msg');/* Cria uma variavel e seleciona a div usando a sintaxe do CSS */
+
+    
+
+    var d = window.document.getElementById('msg');/* Esta selecionando a id<msg>e pondo dentro de uma variavel */
+      d.style.background='green'
+     // d.innerText = 'estou aguardando...'
+
+
+
+    var corpo = window.document.body;/*  está criando uma variavel para modificar o body */
+
+    corpo.style.background = 'Red'; /* pega o corpo e põe em vermelho */
+
+
+
     var p1=window.document.getElementsByTagName('p')[0]; /* pegando todos os <p> */
-    window.document.write(window.document.URL);
+
+    p1.style.color='blue' /* está pegando a variavel pondo um estilo e mudando sua cor */
+
+
+
+    window.document.write(window.document.URL);/* Mostra a url do site */
+
+    window.document.write('<br/>Está escrito assim: '+ p1.innerText)/* pega o texto dentro do <P> */
   </script>
 </html>
