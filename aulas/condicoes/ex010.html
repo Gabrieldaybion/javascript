@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sistema de multa</h1>
+
+    <form action="">
+        <p><label for="txtvel">Digite a velocidade.</label>
+        <input type="number" name="txtvel" id="txtvel"><!-- Cria um input e da o id(txtvel)-->
+        <input type="button" value="verificar" onclick="calcular()"></p>
+        
+    </form>
+    <div id="res">
+
+    </div>
+    <script>
+        
+        function calcular() /* cria uma função */{
+        var txtv=window.document.querySelector('input#txtvel');/* Aqui pega o id (txtvel)em HTML põe dentro de uma variavel em js */
+
+        var res = window.document.querySelector('div#res') /* poe a div dentro de uma variavel */
+
+        var vel = Number(txtv.value);/* pega o valor digitado e põe em uma variavel */
+
+        res.innerHTML = `<p>Sua velocidade atual é de ${vel}Km/h.</p>`; /* escreve na div HTML */
+        if(vel > 60){
+            res.innerHTML += `<p>Voçê está muldado por passar de 60km/h.</p>`/* Se põe o (+=) para que não apague a mensagem de cima.  */
+        }
+        res.innerHTML += `<p>Dirija sempre com o cinto de segurança</p>`;/* escreve na div HTML */
+
+        }
+    </script>
+</body>
+</html>

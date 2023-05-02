@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu pais.</title>
+    <style>
+        body{
+            background-color: rgba(16, 252, 173, 0.904);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        div#main{
+            background-color: aquamarine;
+        }
+        input#env{
+            background-color: red;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite seu pais.</h1>
+
+    
+        <form action="">
+            <p><label for="pais">Digite seu pais:</label>
+            <input type="text" name="pais" id="pais" size="7">
+
+            <input type="button" id="env" value="Enviar" onclick="calcular()">
+            </p>
+        </form>
+        <div id="escrever">
+    
+        </div>
+
+    <script>
+        function calcular(){
+            var pai = window.document.querySelector('input#pais');
+            var esc= window.document.querySelector('div#escrever');
+            var vel = String(pai.value)
+            if( vel =='br'){
+                esc.innerHTML='Olá é um prazer em saber que você é brasileiro';
+            }
+            else{
+                esc.innerHTML= `Então você é ${vel}, muito legal.`
+            }
+        }
+    </script>
+</body>
+</html>
