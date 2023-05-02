@@ -13,6 +13,22 @@
         }
         div#chat{
             background-color: bisque;
+            border-radius: 45px 45px 20px 20px ;
+            padding: 0px;
+            box-shadow: 1px 1px 5px black;
+        }
+        div#escreve{
+            background-color: cadetblue;
+            border-radius: 0px 0px 45px 45px;
+        }
+        form p{
+            padding: 3px;
+            margin: 0px;
+           
+        }
+        input#btn{
+            background-color: black;
+            color: white;
         }
     </style>
 </head>
@@ -25,17 +41,25 @@
         <form action="" autocomplete="off">
             <p><label for="msg">Digite: </label>
             <input type="text" name="msb" id="msg" > 
-            <input type="button" value="Enviar" onclick="reposta()">
+            <input type="button" id="btn" value="Enviar" onclick="resposta()">
         </p>
         </form>
-        
+
         <div id="escreve">
             <p>mensagem:</p>
         </div>
     </div>
     <script>
         function resposta(){
-
+            var ms = window.document.querySelector('input#msg');
+            var dv=window.document.querySelector('div#escreve');
+            var msr= String(ms.value);
+            if(msr=='oi'){
+                dv.innerHTML='Oie prazer.';
+            }           
+            else{
+                dv.innerHTML ='Digite oi';
+            }
         }
     </script>
 </body>
