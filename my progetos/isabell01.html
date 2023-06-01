@@ -46,7 +46,7 @@
         <form action="" autocomplete="off">
             <p><label for="msg">Digite: </label>
             <input type="text" name="msb" id="msg" > 
-            <input type="button" id="btn" value="Enviar" onclick="resposta()">
+            <input type="button" id="btn" value="Enviar" onclick="resposta()"> <input type="reset" value="Apagar" id="btn">
         </p>
         </form>
 
@@ -58,14 +58,29 @@
         function resposta(){
             var ms = window.document.querySelector('input#msg');
             var dv=window.document.querySelector('div#escreve');
-            var msr= String(ms.value);
+            var agora= new Date();
+               var msr= String(ms.value);
             if(msr=='oi'){
                 dv.innerHTML='Oie prazer.';
             } 
                                                 
-            else{
-                dv.innerHTML ='Digite oi';
+            else if (msr=='bom dia'){
+                dv.innerHTML ='Olá,bom dia!';
                 
+            } else if (msr=='gabriel'){
+            dv.innerHTML = 'Olá seria você meu criador ?'
+            } else if (msr == 'gx'){
+                dv.innerHTML = 'Oie meu criador ebaa me faz ser que nem a lucy'
+            } else if(msr =='hora'){
+                var hora = agora.getHours();
+                var min = agora.getMinutes();
+                dv.innerHTML = `Agora são ${hora}:${min}`
+            }else if (msr == 'data'){
+                var dia= agora.getDate();
+                var mes = agora.getMonth();
+                var ano =  agora.getFullYear();
+                dv.innerHTML = `${dia}/${mes}/${ano}`;
+
             }
         }
         
