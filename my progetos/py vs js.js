@@ -1,5 +1,6 @@
-console.log('Olá mundo! ');
-console.log('Oie');
-var deg='degabiontwess';
-console.log(deg);
-print('Ola mundo');
+var deg = 'g';
+if (deg=='g'){
+    console.log('Olá sr gabriel xavier')
+}else{
+    console.log('Epa VC NÃO É O GABRIEL')
+}
