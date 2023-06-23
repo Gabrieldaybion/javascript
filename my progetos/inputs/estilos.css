@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: cursive;
+}
+body{
+    background-color: blanchedalmond;
+
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vh 70% 10vh;
+    grid-template-areas: "h h"
+                         "m m"
+                         "f f";
+
+}
+header{
+    height: 20vh;
+    background-color: rgb(97, 95, 95);
+    grid-area: h;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+main{
+    background-color: rgba(126, 74, 74, 0.521);
+    grid-area: m;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+.contas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+
+}
+.cont{
+    height: 130px;
+    background-color: rgb(60, 60, 221);
+}
+/* Somar */
+#som{
+    background-color: rgb(175, 26, 26);
+
+}
+#contsoma{
+    display: flex;
+    flex-direction: row;
+}
+#resuldado{
+    width:29px;
+}
+.textos{
+    width:69px;
+}
+#isom{
+    width:69px;
+}
+#isom2{
+    width: 69px;
+}
+#ressomar{
+    background-color: brown;
+}
+/* Subtrair */
+#sub{
+    background-color: rgb(194, 194, 56);
+}
+#mul{
+
+}
+#div{
+    background-color: rgb(43, 189, 43);
+}
+.mensagem{
+
+}
+footer{
+    background-color: rgb(103, 155, 155);
+    grid-area: f;
+}
