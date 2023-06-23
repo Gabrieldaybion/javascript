@@ -21,3 +21,6 @@ function calcularsub(){
     }
 
 }
+function calcularmulti(){
+    
+}
