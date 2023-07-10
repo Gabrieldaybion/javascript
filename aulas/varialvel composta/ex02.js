@@ -10,4 +10,4 @@ num.sort()
 for(let pos in num ){
     console.log(num[pos])
 } */
-console.log(num.indexOf(3))/* Exite o valor 3 no vetor 3 */
+console.log(num.indexOf(3))/* Exite o valor 3 no vetor 3 */                  
